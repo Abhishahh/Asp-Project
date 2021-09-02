@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22 style=%22user-select: auto;%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%237d6ee7%22 style=%22user-select: auto;%22></rect><path fill=%22%23fff%22 d=%22M16.80 56.07L16.80 56.07Q19.57 56.07 21.39 55.51Q23.20 54.95 24.00 54.42L24.00 54.42L24.00 44.85L15.81 45.71Q12.38 46.04 10.73 47.26Q9.08 48.48 9.08 50.86L9.08 50.86Q9.08 53.37 10.99 54.72Q12.91 56.07 16.80 56.07ZM16.74 28.15L16.74 28.15Q22.48 28.15 25.84 30.73Q29.21 33.30 29.21 38.85L29.21 38.85L29.21 54.49Q29.21 55.94 28.65 56.70Q28.09 57.46 26.97 58.12L26.97 58.12Q25.38 59.04 22.77 59.74Q20.17 60.43 16.80 60.43L16.80 60.43Q10.60 60.43 7.20 57.99Q3.80 55.54 3.80 50.92L3.80 50.92Q3.80 46.57 6.64 44.36Q9.48 42.15 14.62 41.62L14.62 41.62L24.00 40.69L24.00 38.85Q24.00 35.55 22.02 34.03Q20.04 32.51 16.67 32.51L16.67 32.51Q13.90 32.51 11.46 33.30Q9.01 34.09 7.10 35.08L7.10 35.08Q6.57 34.62 6.14 34.03Q5.71 33.43 5.71 32.71L5.71 32.71Q5.71 31.78 6.18 31.19Q6.64 30.60 7.63 30.07L7.63 30.07Q9.41 29.14 11.72 28.65Q14.03 28.15 16.74 28.15ZM60.36 51.39L60.36 51.39Q60.36 55.61 57.26 57.99Q54.16 60.36 48.28 60.36L48.28 60.36Q45.78 60.36 43.66 59.93Q41.55 59.50 40.07 58.81Q38.58 58.12 37.76 57.23Q36.93 56.34 36.93 55.41L36.93 55.41Q36.93 54.62 37.36 53.89Q37.79 53.17 38.65 52.64L38.65 52.64Q40.43 53.96 42.81 54.98Q45.18 56.01 48.22 56.01L48.22 56.01Q55.08 56.01 55.08 51.39L55.08 51.39Q55.08 47.62 50.53 46.50L50.53 46.50L45.05 45.05Q41.02 43.99 39.18 41.98Q37.33 39.97 37.33 36.80L37.33 36.80Q37.33 35.08 38.02 33.50Q38.71 31.92 40.17 30.73Q41.62 29.54 43.76 28.85Q45.91 28.15 48.81 28.15L48.81 28.15Q53.43 28.15 56.27 29.51Q59.11 30.86 59.11 32.64L59.11 32.64Q59.11 33.50 58.68 34.16Q58.25 34.82 57.52 35.15L57.52 35.15Q56.34 34.36 54.16 33.43Q51.98 32.51 49.01 32.51L49.01 32.51Q46.04 32.51 44.29 33.63Q42.54 34.75 42.54 36.80L42.54 36.80Q42.54 38.32 43.53 39.37Q44.52 40.43 46.83 40.96L46.83 40.96L51.39 42.08Q55.87 43.20 58.12 45.41Q60.36 47.62 60.36 51.39ZM81.35 60.36L81.35 60.36Q79.04 60.36 76.99 59.83Q74.95 59.31 73.63 58.58L73.63 58.58L73.63 71.38Q73.30 71.52 72.64 71.68Q71.98 71.85 71.19 71.85L71.19 71.85Q68.35 71.85 68.35 69.40L68.35 69.40L68.35 34.56Q68.35 33.24 68.81 32.44Q69.27 31.65 70.72 30.79L70.72 30.79Q72.51 29.80 74.98 28.98Q77.46 28.15 80.62 28.15L80.62 28.15Q83.86 28.15 86.73 29.08Q89.60 30.00 91.68 31.95Q93.76 33.90 94.98 36.93Q96.20 39.97 96.20 44.19L96.20 44.19Q96.20 48.28 95.11 51.32Q94.02 54.36 92.04 56.37Q90.06 58.38 87.32 59.37Q84.58 60.36 81.35 60.36ZM80.62 56.01L80.62 56.01Q85.24 56.01 88.05 53.20Q90.85 50.40 90.85 44.19L90.85 44.19Q90.85 40.96 90.03 38.71Q89.20 36.47 87.78 35.08Q86.37 33.70 84.52 33.10Q82.67 32.51 80.62 32.51L80.62 32.51Q78.25 32.51 76.60 33.10Q74.95 33.70 73.63 34.42L73.63 34.42L73.63 53.89Q74.88 54.82 76.60 55.41Q78.31 56.01 80.62 56.01Z%22 style=%22user-select: auto;%22></path></svg>" />
+
+    <title>Asp Project</title>
+    <style>
+        .card {
+            margin: 0 auto;
+            /* Added */
+            float: none;
+            /* Added */
+            margin-bottom: 10px;
+            /* Added */
+        }
+
+        .text {
+            margin: 0 auto;
+            /* Added */
+            float: none;
+            /* Added */
+            margin-bottom: 10px;
+            /* Added */
+        }
+
+        h3 {
+            font-family: 'Hina Mincho', serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Coding</a>
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#coverpage">Cover page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ack">Acknowledgement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#index">index</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#intro" tabindex="-1">Introduction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#content" tabindex="-1">Content</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#practical" tabindex="-1">Practical component</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#global" tabindex="-1">Global issues</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#conclusion" tabindex="-1">Conclusion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bib" tabindex="-1">Biblography</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#glo" tabindex="-1">Glossary</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <a name="coverpage"></a>
+    <div class="p-3 mb-2 bg-info text-dark">
+        <div class="card" style="width: 18rem;">
+            <a name="coverpage"></a>
+            <img src="0001.jpg" class="card-img-top" alt="...">
+        </div>
+    </div>
+    <center>
+        <a name="ack"></a>
+        <div class="p-3 mb-2 bg-warning text-dark">
+            <h1>Acknowledgement</h1>
+            <h3>I would like to thank my teacher naureen kutty who gave me this opportunity to work on
+                this
+                project. I got to learn a lot from this project about i learned how to design a project. I would also
+                like
+                to thank our school principal, Mr. jude fernandez.
+                I would also like to extend my heartfelt thanks to my parents because without their help this project
+                would not have been successful. Finally, I would like to thank to the technology because due to
+                technology i can create this type of website . Thank you all 😊
+            </h3>
+        </div>
+    </center>
+    <center>
+        <a name="index"></a>
+        <div class="p-3 mb-2 bg-light text-dark">
+            <h1>index</h1>
+            <center>
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Sr</th>
+                            <th scope="col">Subject</th>
+                            <th scope="col">Date</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Introduction</td>
+                            <td>2/9/21</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Content</td>
+                            <td>2/9/21</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Practical component</td>
+                            <td>2/9/21</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Relevance to global issues</td>
+                            <td>2/9/21</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Conclusion</td>
+                            <td>2/9/21</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Bibliography</td>
+                            <td>2/9/21</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>Glossary</td>
+                            <td>2/9/21</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </center>
+        </div>
+    </center>
+    </div>
+    <center>
+        <a name="intro"></a>
+        <div class="p-3 mb-2 bg-primary text-white">
+            <img src="https://cdn-wordpress-info.futurelearn.com/info/wp-content/uploads/Algorithms2BCoding3DProgramming.png"
+                alt="">
+            <h1 class="bg-dark">Introduction</h1>
+            <h4>Computers can help us with a wide range of problems, but in order for this to happen, we need to
+                undertake a 2-step process:
+                Formulate the precise sequence of steps needed to solve the problem. This is known as an algorithm.
+                Give the algorithm to a computer in a language it understands, so that it can perform the task(s) we
+                give it. This is known as coding.
+                The process of creating algorithms and turning them into code is called programming.
+            </h4>
+            <h1 class="bg-dark">Coding vs programming
+                what is the difference?
+            </h1>
+            <h4>
+                Coders are mainly used to translate the requirements and their logic into a language that machines can
+                understand whereas Programming deals with much more than that. ... Coding is the initial step of
+                developing any software and thus it is much easier and simpler to analyze and understand than
+                Programming</h4>
+        </div>
+    </center>
+    <center>
+        <a name="content"></a>
+        <div class="p-3 mb-2 bg-danger text-white">
+            <h1 class="bg-dark">Content</h1>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfNikreL2sfwO_bXUSwV-CDu8X129UqWRnEw&usqp=CAU"
+                alt="">
+            <img src="data:image/jpeg;base64,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"
+                alt="">
+            <img src="data:image/jpeg;base64,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"
+                alt="">
+            <h1 class="bg-dark">History of coding
+            </h1>
+            <h4>
+
+
+                <h4>
+                    The late 1950s saw the invention of coding languages that are still in use today –
+                    specifically, FORTRAN, LISP and COBOL. Technology swiftly unfolded throughout the 60s, with
+                    the notion of computer gaming being born, the mouse being invented, and ARPANET, the
+                    predecessor to the internet, being created.</h4>
+                <h1 class="bg-dark">why people choose coding as their career?
+                </h1>
+                <h4>
+                    Programming often involves dealing with hard and challenging problems. Solving such problems
+                    provides a
+                    feeling of intellectual satisfaction and contentment. Also, there is a certain deal of "coolness"
+                    associated with letting your code solve challenging problems. (Although this feeling is subjective
+                    but
+                    is one felt by lot of the people your question adheres too) A lot of people initially get attracted
+                    to
+                    programming and computers due to this.</h4>
+
+                <h1 class="bg-dark">why to learn coding?
+                </h1>
+                <h4>
+
+
+                    <h4>
+                        Programming often involves dealing with hard and challenging problems. Solving such problems
+                        provides a
+                        feeling of intellectual satisfaction and contentment. Also, there is a certain deal of
+                        "coolness"
+                        associated with letting your code solve challenging problems. (Although this feeling is
+                        subjective
+                        but
+                        is one felt by lot of the people your question adheres too) A lot of people initially get
+                        attracted
+                        to
+                        programming and computers due to this.</h4>
+                    <h1 class="bg-dark">what can we create with coding
+                    </h1>
+                    <h4>
+
+
+                        <h4>
+                            We can create or do websites , Machine Learning , Artificial Intelligence, Apps , Games (If
+                            you want to learn coding follow this website https://shinetf.herokuapp.com/) </h4>
+                        <ol>
+                            <h1 class="bg-dark">Is there future in coding?
+                            </h1>
+                            <h4>
+
+
+                                <h4>
+                                    No wonder the demand for people to take on computer coding jobs has increased. Each
+                                    computer
+                                    system is only as good as the programming code that drives it. ... Gaining coding
+                                    skills is
+                                    a
+                                    real boost to any career, so here are 10 great reasons why coding is still the most
+                                    important
+                                    job skill of the future.</h4>
+                                <ol>
+                                    <li> Coding skills are good for your career prospects. </li>
+                                    <li> We are spending more on IT than ever.</li>
+                                    <li> E-commerce is growing rapidly across Australia.</li>
+                                    <li>The range of coding jobs is growing.</li>
+                                    <li>More job roles now require coding skills.</li>
+                                    <li>Coding skills attract higher wages.</li>
+                                    <li>Our need for cyber security has grown.</li>
+                                    <li>Learning coding skills is good for your brain.</li>
+                                    <li>Programming courses are available at all levels.</li>
+                                    <li>A career that will grow with your skills.</li>
+                                </ol>
+
+        </div>
+        </div>
+    </center>
+    <a name="practical"></a>
+    <center>
+        <div class="p-3 mb-2 bg-primary text-white">
+            <img src="https://content.techgig.com/photo/75430401/5-tips-for-students-to-improve-coding-skills-during-college.jpg?58220"
+                alt="">
+            <h1 class="bg-dark">Practical component</h1>
+            <h4>In this section , i will explain you the data that is written in content section .So lets get started,
+                so in previous section we learned about the history of coding ,why people choose coding as their career?
+                ,why to
+
+                learn coding?
+                Is there future in coding?. So in this section i will probably explain these questions and history of
+                coding. so our first question was why people choose coding as their career , so from my opinion i would
+                say people choose coding as their career because there is lot of money in this branch , people are
+                interested in AI and Ml stuff, etc. So the second question was why to learn coding , so from my opinion
+                why to learn coding because it improves problem solving.And the last question was Is there future in
+                coding, so from my opinion i would say yes there is a lot of future in coding because due to Ai it
+                reduces the work of man, there are many more subject in coding which people are very interested to learn
+                .
+            </h4>
+
+    </center>
+    <center>
+        <a name="global"></a>
+        <div class="p-3 mb-2 bg-primary text-white">
+            <img src="data:image/png;base64,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"
+                alt="">
+            <h1 class="bg-dark">Relevance to global issues</h1>
+            <ol>
+                <li></li>
+                <li> Need For Strong Digital Conference Platforms.</li>
+                <li>Remote Internet Speed and Connections.</li>
+                <li> Phishing and Data Privacy Issues.</li>
+                <li>Deepfake Content.</li>
+                <li>Too Much Focus on Automation.</li>
+                <li>Data Mixups Due to AI Implementation.</li>
+                <li>Poor User Experience.</li>
+                <li>Decreasing of employment</li>
+                <li>Privacy. Perhaps the biggest issue facing tech in 2019 is the question of privacy</li>
+                <li> Disinformation. 2019 has also been the year that disinformation, election interference, and fake
+                    news went mainstream</li>
+                <li> China</li>
+                <li> Biometrics and human rights</li>
+                <li> AI and the economy</li>
+                <li> The future</li>
+
+            </ol>
+
+    </center>
+    <center>
+        <a name="conclusion"></a>
+        <div class="p-3 mb-2 bg-success text-white">
+            <img src="https://cdn.paperpile.com/guides/img/g-thesis-conclusion-image-400x400.png" alt="">
+            <h1 class="bg-dark">Conclusion</h1>
+            <h4>Till now we learned about why people choose coding as there career ? , why to learn coding ? , is there
+                future in coding? , then we learned more about these questions in the practical section, then we also
+                looked at the global issues of technology. So i hope you liked this project and i finally finished this
+                project in 1 day . </h4>
+        </div>
+    </center>
+    <center>
+        <a name="bib"></a>
+        <div class="p-3 mb-2 bg-success text-white">
+            <img src="https://image.slidesharecdn.com/bibliography-121216123323-phpapp02/95/bibliography-1-638.jpg?cb=1355661248"
+                alt="">
+            <h1 class="bg-dark">Bibliography</h1>
+            <h4>I took information from the following platforms </h4>
+            <ol>
+
+                <li>Wikipedia</li>
+                <li>goggle</li>
+                <li>Books</li>
+                <li>Newspapers</li>
+                <li>stackoverflow</li>
+            </ol>
+        </div>
+    </center>
+    <center>
+        <a name="glo"></a>
+        <div class="p-3 mb-2 bg-success text-white">
+            <img src="https://comps.canstockphoto.com/writing-note-showing-glossary-business-drawing_csp67271942.jpg"
+                alt="">
+            <h1 class="bg-dark">Glossary</h1>
+
+            <ol>
+
+                <li>Coding - the process of assigning a code to something for classification or identification. </li>
+                <li>Programming - the process or activity of writing computer programs. </li>
+                <li>Difference - a point or way in which people or things are dissimilar.</li>
+                <li>Content - a thing that is explained </li>
+                <li>History - the study of past events, particularly in human affairs.</li>
+                <li>Algorithms - a process or set of rules to be followed in calculations or other problem-solving
+                    operations, especially by a computer. </li>
+                <li>Skill - the ability to do something well </li>
+                <li>Create - bring (something) into existence </li>
+                <li>Website - a set of related web pages located under a single domain name, typically produced by a
+                    single person or organization.</li>
+                <li>learn - gain or acquire knowledge of or skill in (something) by study, experience, or being taught.
+                </li>
+                <li>Career - an occupation undertaken for a significant period of a person's life and with opportunities
+                    for progress.</li>
+                <li>Invention - the action of inventing something, typically a process or device.</li>
+                <li>Code - a system of words, letters, figures, or symbols used to represent others, especially for the
+                    purposes of secrecy.</li>
+                <li>Deepfake - a video of a person in which their face or body has been digitally altered so that they
+                    appear to be someone else, typically used maliciously or to spread false information. </li>
+                <li>Practical - of or concerned with the actual doing or use of something rather than with theory and
+                    ideas.</li>
+                <li>conclusion - the end or finish of an event, process, or text.</li>
+                <li>Relevance - the quality or state of being closely connected or appropriate. </li>
+                <li>disinformation - false information which is intended to mislead, especially propaganda issued by a
+                    government organization to a rival power or the media.</li>
+                <li>Automation - the use or introduction of automatic equipment in a manufacturing or other process or
+                    facility.</li>
+
+            </ol>
+        </div>
+    </center>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
